@@ -158,11 +158,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-.contacts,
-.nav-list {
-  display: flex;
-  gap: 40px;
-}
 .work-list-img,
 .team-img,
 .project-foto {
@@ -174,13 +169,35 @@ body {
 /* Header */
 
 .page-header {
+  min-width: 320px;
   border-bottom: 1px solid var(--accent-color);
   box-shadow: var(--header-shadow);
 }
-.header-container,
-.navigation {
-  display: flex;
-  align-items: center;
+.header-container {
+  height: 70px;
+  padding: 24px 16px 22px 16px;
+}
+@media only screen and (min-width: 768px) {
+  .header-container {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    height: auto;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .navigation {
+    display: flex;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .header-container,
+  .navigation {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+  }
 }
 .logo {
   font-family: var(--secondary-font);
@@ -191,11 +208,41 @@ body {
   text-transform: uppercase;
   color: var(--primary-brand-color);
 }
-.header-logo {
-  margin-right: 76px;
+@media only screen and (min-width: 768px) {
+  .header-logo {
+    margin-right: 120px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .header-logo {
+    margin-right: 76px;
+  }
 }
 .logo-part-header {
   color: var(--secondary-color);
+}
+.contacts,
+.nav-list {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .nav-list {
+    display: flex;
+    gap: 40px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .contacts {
+    flex-direction: row;
+    gap: 40px;
+  }
 }
 .nav-link {
   transition: color var(--transition-timings);
@@ -224,16 +271,37 @@ body {
 }
 .mail-tel {
   margin-left: auto;
+  width: max-content;
 
   font-style: normal;
 }
-.mail-tel-link {
-  transition: color var(--transition-timings);
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+  .contacts-item {
+    font-size: 9.5px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .mail-tel-link {
+    transition: color var(--transition-timings);
 
-  display: block;
-  padding: 24px 0;
+    font-size: 12px;
+    line-height: 1.17px;
+    letter-spacing: 0.04em;
 
-  color: inherit;
+    color: inherit;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .mail-tel-link {
+    display: block;
+    padding: 24px 0;
+
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+
+    color: inherit;
+  }
 }
 .nav-link:hover,
 .nav-link:focus,
