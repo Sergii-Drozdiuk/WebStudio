@@ -363,7 +363,6 @@ body {
   padding: 0;
   cursor: pointer;
   border: none;
-  border: 1px solid var(--close-btn-border);
 }
 @media only screen and (min-width: 768px) {
   .burger-menu {
@@ -372,11 +371,11 @@ body {
 }
 .burger-menu:hover,
 .burger-menu:focus {
-  fill: var(--pressed-state-color);
+  stroke: var(--pressed-state-color);
 }
 .burger-menu-icon {
-  transition: fill var(--transition-timings);
-  fill: currentColor;
+  transition: stroke var(--transition-timings);
+  stroke: currentColor;
 }
 .icon-close-mobile {
   transition: fill var(--transition-timings);
@@ -480,6 +479,7 @@ body {
 /* Hero */
 
 .hero.section {
+  min-width: 320px;
   padding: 112px 0;
 }
 @media only screen and (min-width: 1158px) {
@@ -490,7 +490,6 @@ body {
 .hero {
   background-color: var(--secondary-color);
 
-  min-width: 320px;
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
@@ -1054,13 +1053,30 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 408px;
-  min-height: 576px;
+  width: 100%;
+  max-width: 392px;
+  min-height: 586px;
   background-color: var(--modal-background);
   box-shadow: var(--modal-shadow);
   border-radius: 4px;
-  padding: 24px;
-  padding-top: 72px;
+  padding: 72px 16px 24px 16px;
+}
+@media screen and (min-width: 428px) and (max-width: 767px) {
+  .modal {
+    width: 392px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+    padding: 24px;
+    padding-top: 72px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .modal {
+    min-height: 584px;
+  }
 }
 .modal-close-btn {
   transition: background-color var(--transition-timings),
