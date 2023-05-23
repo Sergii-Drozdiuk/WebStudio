@@ -494,11 +494,46 @@ body {
   margin-left: auto;
   margin-right: auto;
 
-  background-image: linear-gradient(var(--bg-gradient), var(--bg-gradient)),
-    url('../images/hero/people-in-office.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  /* Mobile screen */
+  background-image: linear-gradient(var(--bg-gradient), var(--bg-gradient)),
+    url(../images/hero/people-office_mob.jpg);
+  /* retina mobile screen */
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(var(--bg-gradient), var(--bg-gradient)),
+      url(../images/hero/people-office_mob@2x.jpg);
+  }
+
+  /* Tablet screen */
+  @media screen and (min-width: 429px) {
+    background-image: linear-gradient(var(--bg-gradient), var(--bg-gradient)),
+      url(../images/hero/people-office_tab.jpg);
+    /* retina tablet screen */
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(var(--bg-gradient), var(--bg-gradient)),
+        url(../images/hero/people-office_tab@2x.jpg);
+    }
+  }
+
+  /* Desktop screen */
+  @media screen and (min-width: 769px) {
+    background-image: linear-gradient(var(--bg-gradient), var(--bg-gradient)),
+      url(../images/hero/people-office.jpg);
+    /* retina desktop screen */
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(var(--bg-gradient), var(--bg-gradient)),
+        url(../images/hero/people-office@2x.jpg);
+    }
+  }
 }
 .hero-title {
   margin: 0 auto;
