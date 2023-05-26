@@ -433,7 +433,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 80px 40px 40px 40px;
+  padding: 80px 40px;
   background-color: var(--third-color);
   z-index: 999;
 
