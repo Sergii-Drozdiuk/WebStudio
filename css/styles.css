@@ -1302,6 +1302,11 @@ body {
   letter-spacing: 0.04em;
   color: var(--subtitle-color);
 }
+@media screen and (max-width: 395px) {
+  .modal-form-agreement-text {
+    width: 215px;
+  }
+}
 .modal-form-agreement-link {
   transition: color var(--transition-timings),
     outline-color var(--transition-timings);
