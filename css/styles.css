@@ -1178,6 +1178,11 @@ body {
   letter-spacing: 0.02em;
   color: var(--secondary-color);
 }
+@media screen and (max-width: 395px) {
+  .modal-form-title {
+    font-size: 12px;
+  }
+}
 .modal-form-label {
   display: block;
   margin-bottom: 4px;
