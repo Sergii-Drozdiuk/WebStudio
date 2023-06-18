@@ -435,6 +435,7 @@ body {
   height: 100vh;
   padding: 80px 40px;
   background-color: var(--third-color);
+  overflow-y: auto;
   z-index: 999;
 
   display: flex;
@@ -1115,6 +1116,7 @@ body {
   box-shadow: var(--modal-shadow);
   border-radius: 4px;
   padding: 72px 16px 24px 16px;
+  overflow-y: auto;
 }
 @media screen and (min-width: 428px) and (max-width: 767px) {
   .modal {
