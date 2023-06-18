@@ -19,7 +19,7 @@ const modal = document.querySelector("[data-modal]");
   closeModalBtn.addEventListener("click", toggleModal);
 
   // Close the mobile menu on wider screens if the device orientation changes
-  window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
+  window.matchMedia('(max-width: 1158px)').addEventListener('change', e => {
     if (!e.matches) return;
     modal.classList.add('is-hidden');
     openModalBtn.setAttribute('aria-expanded', false);
