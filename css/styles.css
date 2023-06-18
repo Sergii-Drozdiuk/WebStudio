@@ -1084,6 +1084,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  overflow-y: auto;
   z-index: 100;
   width: 100%;
   height: 100%;
@@ -1116,7 +1117,6 @@ body {
   box-shadow: var(--modal-shadow);
   border-radius: 4px;
   padding: 72px 16px 24px 16px;
-  overflow-y: auto;
 }
 @media screen and (min-width: 428px) and (max-width: 767px) {
   .modal {

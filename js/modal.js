@@ -21,7 +21,7 @@ const modal = document.querySelector("[data-modal]");
   // Close the mobile menu on wider screens if the device orientation changes
   window.matchMedia('(max-width: 1158px)').addEventListener('change', e => {
     if (!e.matches) return;
-    modal.classList.add('is-hidden');
+    modal.classList.add("is-hidden");
     openModalBtn.setAttribute('aria-expanded', false);
     bodyScrollLock.enableBodyScroll(document.body);
   });
